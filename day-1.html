@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Codeflow</title>
+  <link rel="stylesheet" href="/main project/main css/day-1.css">
+</head>
+
+<body>
+  <h1 class="heading1">🚀 CodeFlow - Day 1</h1>
+  <p>Welcome! Start coding below:</p>
+  <textarea class="textarea" placeholder="write your code here..." onkeydown="countLines(event); "></textarea>
+  <div class="button-block">
+    <button onclick=" saveData(); onkeydown=shortSaveKey(event); ">📄SAVE</button>
+    <button onclick=" loadData(); ">📁LOAD</button>
+    <button onclick=" clearData(); ">🗑️DELETE DATA</button>
+    <button onclick="
+    countWords();
+    ">📊COUNT</button>
+    <button  onclick="
+    changeColour();
+    ">☀️🌙CHANGE THEME</button>
+    <input type="text" id="findBox" placeholder="find">
+    <button class="findButton">find</button>
+    <input type="text" id="replaceBox" placeholder="replace word">
+    <button class="replaceButton">replace</button>
+  </div>
+  <div id="output" class="info-div"></div>
+
+  <script src="/main project/main js/day-1.js"></script>
+
+  
+
+</body>
+
+</html>
