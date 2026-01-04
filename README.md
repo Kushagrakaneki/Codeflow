@@ -53,7 +53,7 @@ Building a collaborative code editor from scratch to master full-stack developme
 ![Screenshot](./screenshots/countcd.png)
 
 ### 8 - Find Total Occurences
-![Screenshot](./screenshots/fincd.png)
+![Screenshot](./screenshots/findcd.png)
 
 ### 9 - Replace Word entered in Find box
 ![Screenshot](./screenshots/replacecd.png)
