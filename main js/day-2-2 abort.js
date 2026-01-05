@@ -4,6 +4,7 @@ let inputBox = document.querySelector('.textarea');
 
 //code for loading data on page load
 window.onload = loadData();
+
 //code for changing theme
 function changeColour() {
   if (document.body.style.backgroundColor === 'black') {
@@ -28,9 +29,9 @@ function printLines() {
 function saveData() {
 
   return new Promise((resolve, reject) => {
-    
+
     let content = inputBox.value;
-    
+
     if (content) {
 
       lastSavedData();
@@ -50,20 +51,20 @@ function saveData() {
 }
 
 //function for getting last saved data
-let lastData='';
+let lastData = '';
 
-function lastSavedData(){
-  lastData=localStorage.getItem('content');
-  
+function lastSavedData() {
+  lastData = localStorage.getItem('content');
+
 }
-document.body.addEventListener('keydown', (e)=>{
-  if((e.key=='Z'|| e.key=='z') && e.ctrlKey){
-    inputBox.value=lastData;
-    outputBox.innerHTML='Restored last saved data☁️';
-    outputBox.style.color='purple';
+document.body.addEventListener('keydown', (e) => {
+  if ((e.key == 'Z' || e.key == 'z') && e.ctrlKey) {
+    inputBox.value = lastData;
+    outputBox.innerHTML = 'Restored last saved data☁️';
+    outputBox.style.color = 'purple';
     setTimeout(() => {
-        outputBox.innerText = "";
-      }, 3000);
+      outputBox.innerText = "";
+    }, 3000);
   }
 })
 //creating promise for just waiting
@@ -125,15 +126,15 @@ async function saveDataToCloud() {
 
     const result = await saveData();
 
-    
-      outputBox.innerText = "saved to cloud ☁️";
-      outputBox.style.color = 'green';
 
-      setTimeout(() => {
-        outputBox.innerText = "";
-      }, 3000);
+    outputBox.innerText = "saved to cloud ☁️";
+    outputBox.style.color = 'green';
 
-   
+    setTimeout(() => {
+      outputBox.innerText = "";
+    }, 3000);
+
+
 
   } catch (error) { //dont write Error because Error is built in object
 
@@ -196,21 +197,21 @@ function loadData() {
   } else {
     outputBox.innerHTML = 'No data found';
     setTimeout(() => {
-        outputBox.innerText = "";
-      }, 3000);
+      outputBox.innerText = "";
+    }, 3000);
   }
 }
 
 //code for clearing data
 function clearData() {
   localStorage.removeItem('content');
-  lastData='';
+  lastData = '';
   inputBox.value = '';
   outputBox.innerHTML = 'Data cleared from cloud☁️ and last saved data cleared';
   outputBox.style.color = 'red';
   setTimeout(() => {
-        outputBox.innerText = "";
-      }, 3000);
+    outputBox.innerText = "";
+  }, 3000);
 }
 
 function countWords() {
@@ -289,9 +290,29 @@ replaceButton.addEventListener('click', () => {
 })
 
 //changing placeholder after no typing for 3 seconds
-if(inputBox.value.length<1){
+if (inputBox.value.length < 1) {
   setTimeout(() => {
     inputBox.focus();//puts cursor in input box and outlines the box
-    inputBox.placeholder='Press [Shift + S] to save data to cloud\nPress [Shift + L] to load previously saved data from cloud not current data and to undo changes\nDelete button to clear data from cloud and last saved data';
-  },3000);
+    inputBox.placeholder = 'Press [Shift + S] to save data to cloud\nPress [Shift + L] to load previously saved data from cloud not current data and to undo changes\nDelete button to clear data from cloud and last saved data';
+  }, 3000);
 }
+
+//emojiBox
+
+
+const emojiBox = document.querySelector('.emojiBox');
+function makeHappy() {
+  emojiBox.innerHTML = 'Typing...😌';
+  emojiBox.classList.add('typing');
+}
+function makeSad() {
+  emojiBox.innerHTML = 'Not typing...🥲';
+  emojiBox.classList.remove('typing');
+}
+const debouncedMakeSad = debounce(makeSad, 500);
+
+inputBox.addEventListener('input', () => {
+  makeHappy();
+
+  debouncedMakeSad();
+})

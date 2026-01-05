@@ -12,6 +12,22 @@ body {
   color: white;
   padding: 20px;
 }
+.top-part {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.frsection{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+
+
+
+
 
 .heading1 {
   border: 1px solid orange;
@@ -111,4 +127,12 @@ textarea::placeholder {
   gap:10px;
 
 
+}
+
+.emojiBox{
+  transition: all 0.2s;
+  margin-left: auto;
+}
+.typing{
+  transform: scale(1.2);
 }
