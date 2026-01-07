@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Codeflow</title>
+  <link rel="stylesheet" href="/main css/day-2-4 audio.css">
+</head>
+
+<body>
+  <div class="top-part">
+    <h1 class="heading1">🚀 CodeFlow Project</h1>
+    <div class="frsection">
+      <input type="text" id="findBox" placeholder="find">
+      <button class="findButton">find</button>
+      <input type="text" id="replaceBox" placeholder="replace word">
+      <button class="replaceButton">replace</button>
+    </div>
+  </div>
+
+  <p>Welcome! Start coding below:</p>
+  <textarea class="textarea" placeholder="write your code here..." onkeydown="countLines(event); "></textarea>
+  <div class="button-block">
+    <button onclick=" saveDataToCloud(); onkeydown=shortSaveKey(event); ">📄SAVE</button>
+    <button onclick=" loadData(); ">📁LOAD</button>
+    <button onclick=" clearData(); ">🗑️DELETE DATA</button>
+    <button onclick="
+    countWords();
+    ">📊COUNT</button>
+    <button onclick="
+    changeColour();
+    ">☀️🌙CHANGE THEME</button>
+
+    <button class="emojiBox" onclick="">🫤</button>
+
+  </div>
+  <div id="output" class="info-div"></div>
+
+  <audio id="myAudio" preload="auto">
+      <source src="/sound/ambientSound.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="/main js/day-2-4 audio.js"></script>
+
+
+</body>
+
+</html>

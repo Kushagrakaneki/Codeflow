@@ -314,3 +314,23 @@ inputBox.addEventListener('input', () => {
 
   debouncedMakeSad();//runs makeSad() after 500ms while killing old timeout for smooth transition 
 })
+
+
+
+// ===============================
+// TYPING ANIMATION
+// ===============================
+function activateTypingEffect() {
+  inputBox.classList.add("typing-active");
+}
+
+function deactivateTypingEffect() {
+  inputBox.classList.remove("typing-active");
+}
+
+const debouncedTypingOff = debounce(deactivateTypingEffect, 300);
+
+inputBox.addEventListener("input", () => {
+  activateTypingEffect();
+  debouncedTypingOff();
+});

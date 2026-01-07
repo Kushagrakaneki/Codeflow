@@ -183,8 +183,50 @@ function debounce(func, wait) {
     }, wait);
   }
 }
+//audio
+const audioElement = document.getElementById('myAudio');
+let audioUnlocked = false;
+
+document.body.addEventListener("click", () => {
+  if (!audioUnlocked) {
+    audioElement.volume = 0.5;
+    audioElement.play().then(() => {
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      audioUnlocked = true;
+    });
+  }
+
+}, { once: true });
+
+function playSound() {
+  if (!audioUnlocked) return;
+  audioElement.volume = 0.5;
+  audioElement.play();
+}
+
+const debouncedStopSound = debounce(() => {
+
+  async function fadeSound() {
+    await new Promise(() => {
+      while (audioElement.volume > 0) {
+        audioElement.volume -= 0.01;
+        wait(10);
+      }
+    })
+  }
+  fadeSound();
+  audioElement.pause();
+}, 10000);
+
 let debouncedSave = debounce(saveDataToCloud, 500);
-inputBox.addEventListener('input', debouncedSave);
+
+inputBox.addEventListener('input', () => {
+  debouncedSave();
+  playSound();
+  debouncedStopSound();
+
+});
 //⭐⭐⭐⭐⭐⭐⭐⭐⭐
 
 //code for loading data using load button
@@ -314,3 +356,10 @@ inputBox.addEventListener('input', () => {
 
   debouncedMakeSad();//runs makeSad() after 500ms while killing old timeout for smooth transition 
 })
+
+
+
+// inputBox.addEventListener("keydown", () => {
+//   playSound();
+//   debouncedStopSound();
+// })
