@@ -1,4 +1,4 @@
-# Codeflow  [Last updated: 3rd Jan,2026]
+# Codeflow  [Last updated: 7th Jan,2026]
 Learning full-stack dev by building CodeFlow - a collaborative code editor
 
 # 🚀 CodeFlow - Learning Journey
@@ -61,6 +61,15 @@ Building a collaborative code editor from scratch to master full-stack developme
 ### 10 - Light Theme
 ![Screenshot](./screenshots/lightcd.png)
 
+
+### BACKGROUND MUSIC 🎵🎶 - 
+
+  Added background ambient music which plays while typing and stops playing after 10 seconds when you stop typing and picks up from where it left off when start typing again.
+
+### NOTE ‼️ -
+
+  tested new codeflow look using AI only for the css and have not changed from old look to new look for now unless i understand how to do it on my own.
+
 ## 💡 What I Learned
 
 ### 1
@@ -76,6 +85,7 @@ Building a collaborative code editor from scratch to master full-stack developme
 - AbortController for cancelling operations
 - Debounce pattern to prevent excessive API calls
 - Race condition prevention
+- how to add sound
 
 ## 🔗 Links
 - [Live Demo](https://your-demo-link.com) (coming soon)
