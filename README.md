@@ -1,4 +1,4 @@
-# Codeflow  [Last updated: 7th Jan,2026]
+# Codeflow  [Last updated: 8th Jan,2026]
 Learning full-stack dev by building CodeFlow - a collaborative code editor
 
 # 🚀 CodeFlow - Learning Journey
@@ -60,6 +60,9 @@ Building a collaborative code editor from scratch to master full-stack developme
 
 ### 10 - Light Theme
 ![Screenshot](./screenshots/lightcd.png)
+
+### 11 - Auto-Placeholder
+![Screenshot](./screenshots/autocd.png)
 
 
 ### BACKGROUND MUSIC 🎵🎶 - 
