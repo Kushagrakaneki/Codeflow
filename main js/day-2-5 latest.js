@@ -6,12 +6,15 @@ let inputBox = document.querySelector('.textarea');
 window.onload = loadData();
 
 //code for changing theme
-function changeColour() {
+const themeEle=document.querySelector('#theme');
+themeEle.addEventListener('click',()=>{
   if (document.body.style.backgroundColor === 'black') {
     document.body.style.backgroundColor = 'white';
   }
   else document.body.style.backgroundColor = 'black';
-}
+});
+
+
 let totalLines = 0;
 function countLines(event) {
   if (event.key === 'Enter') {
@@ -358,9 +361,8 @@ inputBox.addEventListener('input', () => {
   debouncedMakeSad();//runs makeSad() after 500ms while killing old timeout for smooth transition 
 })
 
-
-
-// inputBox.addEventListener("keydown", () => {
-//   playSound();
-//   debouncedStopSound();
-// })
+//adding reload on clicking codeflow heading
+const heading1=document.querySelector('.heading1');
+heading1.addEventListener('click', () => {
+  location.reload(); // Reload the page
+})

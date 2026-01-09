@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  /* Padding won't break your layout width */
+
+  /* Remove default browser gaps */
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+}
+.top-part {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.frsection{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+
+
+
+
+
+.heading1 {
+  border: 1px solid orange;
+  width: 400px;
+  height: 60px;
+  padding: 10px 10px;
+  color: orange;
+  cursor: pointer;
+
+}
+
+.heading1:hover {
+  border: 1px solid orange;
+  color: white;
+  transform: scale(1.05);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: orange;
+  font-weight: bold;
+  border: 1px solid  orange;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(182, 136, 51);
+}
+
+textarea {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 400px;
+  background-color: dimgrey;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+  border: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  color: orange;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid orange;
+}
+
+textarea::placeholder {
+  color: orange;
+  font-style: italic;
+
+}
+
+#output {
+  background-color: #2d2d2d;
+  padding: 15px;
+  margin-top: 5px;
+  min-height: 120px;
+  border-radius: 8px;
+
+}
+
+#replaceBox,
+#findBox {
+
+  padding: 10px 20px;
+  background-color: dimgrey;
+  border: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  color: orange;
+
+}
+
+#replaceBox::placeholder,
+#findBox::placeholder {
+
+  font-style: italic;
+  font-size: 15px;
+}
+
+#replaceBox:focus,
+#findBox:focus {
+  outline: none;
+  border: 2px solid orange;
+}
+
+.button-block {
+  /*to align the buttons and inputs*/
+  display: flex;
+  align-items: center;
+  gap:10px;
+
+
+}
+
+.emojiBox{
+  transition: all 0.2s;
+  margin-left: auto;
+}
+.typing{
+  transform: scale(1.2);
+}
