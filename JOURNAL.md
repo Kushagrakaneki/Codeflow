@@ -39,4 +39,4 @@ So yes, Resetting the timer (killing the old one) is the entire magic of debounc
 
 ## **8th jan-learning react**
 
--currently learning react
+-currently learning react concepts like jsx,props,state etc 
