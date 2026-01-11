@@ -1,4 +1,4 @@
-# Codeflow  [Last updated: 8th Jan,2026]
+# Codeflow  [Last updated: 11th Jan,2026]
 Learning full-stack dev by building CodeFlow - a collaborative code editor
 
 # 🚀 CodeFlow - Learning Journey
@@ -29,7 +29,7 @@ Building a collaborative code editor from scratch to master full-stack developme
 - localStorage for persistence
 - Async patterns (Promises, AbortController, Debounce)
 
-## 📸 Screenshots
+## 📸 Screenshots and Features
 
 ### 1 - Codeflow Editor
 ![Screenshot](./screenshots/1cd.png)
@@ -64,10 +64,8 @@ Building a collaborative code editor from scratch to master full-stack developme
 ### 11 - Auto-Placeholder
 ![Screenshot](./screenshots/autocd.png)
 
-
-### BACKGROUND MUSIC 🎵🎶 - 
-
-  Added background ambient music which plays while typing and stops playing after 10 seconds when you stop typing and picks up from where it left off when start typing again.
+### 12 - BACKGROUND MUSIC 🎵🎶
+Added background ambient music which plays while typing and stops playing after 10 seconds when you stop typing and picks up from where it left off when start typing again.
 
 ### NOTE ‼️ -
 
